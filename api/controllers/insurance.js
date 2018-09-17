@@ -3,6 +3,21 @@
  */
 const InsuranceService = require('./../services/insurance')
 
+/**
+ * @swagger
+ * /api/insurance:
+ *  get:
+ *    description: JSON.
+ *    tags:
+ *        - Insurance
+ *    responses:
+ *      200:
+ *        description: The request has succeeded
+ *      400:
+ *        description: Bad request
+ *      404:
+ *        description: Not found
+ */
 exports.list = (req, res, next) => {
   InsuranceService.list().then((data) => {
     // Check the result status, by default 200.

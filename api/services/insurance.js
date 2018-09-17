@@ -11,7 +11,7 @@ class InsuranceService {
       user: {
         firstName: 'Juan Pablo',
         lastName: 'Ferrari',
-        email: 'juan@ferrari.com',
+        email: 'juan@ferrari.com'
       }
     }
     return Promise.resolve(new Array(10).fill(information))

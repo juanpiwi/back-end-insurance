@@ -4,6 +4,6 @@ const app = express.Router()
 
 const { list } = require('./../controllers/insurance')
 
-app.get('/', list)
+app.get('/api/insurance', list)
 
 module.exports = app
