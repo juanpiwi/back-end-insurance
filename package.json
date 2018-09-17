@@ -1,0 +1,36 @@
+{
+  "name": "back-end-insurance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development nodemon ./index.js",
+    "debug": "DEBUG=express:* nodemon ./index.js",
+    "lint": "eslint ./index.js api/**",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpiwi/back-end-insurance.git"
+  },
+  "author": "Juan Pablo Ferrari <ferrarijuanp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanpiwi/back-end-insurance/issues"
+  },
+  "homepage": "https://github.com/juanpiwi/back-end-insurance#readme",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "connect-timeout": "^1.9.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1"
+  }
+}
