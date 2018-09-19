@@ -1,6 +1,10 @@
 module.exports = {
   PORT: 3000,
   environment: 'develop',
+  mocky: {
+    timeout: 5000,
+    apiUrl: 'http://www.mocky.io/v2'
+  },
   swagger: {
     swaggerDefinition: {
       info: {
@@ -19,5 +23,9 @@ module.exports = {
     apis: [
       './api/controllers/*.js'
     ]
+  },
+  log: {
+    directory: './logs',
+    filename: 'hoteles-api.log'
   }
 }
