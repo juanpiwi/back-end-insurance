@@ -9,7 +9,7 @@ const { mocky } = require('./../../config')
 const Logger = require('./../common/log-handler')
 
 class InsuranceService {
-  static list () {
+  static getId (id) {
     let options = {
       method: 'GET',
       uri: `${mocky.apiUrl}/5808862710000087232b75ac`,
@@ -23,7 +23,20 @@ class InsuranceService {
       .then(response => {
         if (response.statusCode === 200) {
           Logger.info('services : list : success | time: %s ms', response.elapsedTime)
-          return Promise.resolve(response.body)
+          const clients = response.body.clients
+          const client = clients.find(currClient => currClient.id === id)
+          if (client) {
+            return Promise.resolve(client)
+          }
+          return Promise.resolve({ error:
+            { status: 404,
+              message: {
+                error: 'NotFoundr',
+                cause: 'Not Found',
+                message: 'Error retrieving the client'
+              }
+            }
+          })
         } else {
           return Promise.reject(response)
         }
