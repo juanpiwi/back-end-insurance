@@ -21,7 +21,7 @@ module.exports = {
       produces: ['application/json']
     },
     apis: [
-      './api/controllers/*.js'
+      './api/controllers/**/*.js'
     ]
   },
   log: {

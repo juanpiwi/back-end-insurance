@@ -1,9 +1,11 @@
 /**
  * Module dependencies
  */
-const insurance = require('./insurance')
+const client = require('./clients')
+const swagger = require('./swagger')
 
 // Add routes to ragnar
 module.exports = (router) => {
-  insurance(router)
+  client(router)
+  swagger(router)
 }

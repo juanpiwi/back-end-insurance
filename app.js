@@ -5,7 +5,7 @@ const logger = require('morgan')
 const swaggerJSDoc = require('swagger-jsdoc')
 
 const { swagger } = require('./config')
-const insurance = require('./api/routes/insurance')
+const insurance = require('./api/routes/clients')
 
 const app = express()
 
